@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Harf Üretici</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 20px;
+        }
+        .letter-box {
+            font-size: 100px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔠 Rastgele Harf</h1>
+    <div class="letter-box" id="randomLetter">?</div>
+
+    <script>
+        function getRandomLetter() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const randomIndex = Math.floor(Math.random() * letters.length);
+            document.getElementById("randomLetter").textContent = letters[randomIndex];
+        }
+
+        getRandomLetter();
+
+        setInterval(getRandomLetter, 15000);
+    </script>
+</body>
+</html
